@@ -8,8 +8,16 @@ Problems solved:
 
 1.https://www.codechef.com/problems/TF01
 
+2.https://www.spoj.com/problems/MAIN72/
+
+
 (equal partition problem)
 
 1.https://practice.geeksforgeeks.org/problems/subset-sum-problem/0
 
 2.https://leetcode.com/problems/partition-equal-subset-sum/
+
+(Sumset Sum count)
+
+No submittable problem found so far!
+
