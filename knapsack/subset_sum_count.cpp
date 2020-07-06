@@ -3,8 +3,9 @@
 using namespace std;
 int v[1002];
 int mem[1002][1002];
+int counter=0;
 int subset_sum(int s, int n){
-    if(s==0)return 1;
+    if(s==0){counter++;return 1;}
     if(n==0)return 0;
 
     if(mem[n][s]!=-1)return mem[n][s];
@@ -23,6 +24,7 @@ int subset_sum(int s, int n){
 int subset_sum_iter(int s,int n){
     for(int i=0;i<=n;i++){
         for(int j=0;j<=s;j++){
+            //cout<<i<<j<<endl;
             if(j==0){
                 mem[i][j]=1;
             }
@@ -31,7 +33,7 @@ int subset_sum_iter(int s,int n){
             }
             else{
                 if(v[i-1]<=j){
-                    mem[i][j]=max(mem[i-1][j-v[i-1]], mem[i-1][j]);
+                    mem[i][j]=mem[i-1][j-v[i-1]]+mem[i-1][j];
                 }
                 else{
                     mem[i][j]=mem[i-1][j];
@@ -60,9 +62,15 @@ while(tc--){
 
 
     }
-    cout<<subset_sum(s,n)<<endl;
+    cout<<subset_sum_iter(s,n)<<endl;
+    //cout<<counter<<endl;
 }
+/*for(int i=0;i<1002;i++){
+    for(int j=0;j<1002;j++){
+        if(mem[i][j]!=-1)cout<<mem[i][j]<<" "<<i<<j<<endl;
+    }
 
+}*/
 
 return 0;
 }
