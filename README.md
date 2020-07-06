@@ -8,3 +8,8 @@ Problems solved:
 
 1.https://www.codechef.com/problems/TF01
 
+(equal partition problem)
+
+1.https://practice.geeksforgeeks.org/problems/subset-sum-problem/0
+
+2.https://leetcode.com/problems/partition-equal-subset-sum/
