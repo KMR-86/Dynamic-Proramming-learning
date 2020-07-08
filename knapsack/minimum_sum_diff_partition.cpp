@@ -1,24 +1,34 @@
 #include<bits/stdc++.h>
 #define S 1000000
 using namespace std;
-int mem[52][1002];
+bool mem[52][10002];
 int v[52];
-int min_subset_diff(int sumA,int sumB,int n){
-if(sumA==0)return sumB;
-if(sumB==0)return sumA;
-if(mem[n][sumB]!=-1)return mem[n][sumB];
-
-if(v[n-1]<=sumB){
-    mem[n][sumB]=min(min_subset_diff(sumA+v[n-1],sumB-v[n-1],n-1),min_subset_diff(sumA,sumB,n-1));
-    return mem[n][sumB];
-}
-else{
-    mem[n][sumB]=min_subset_diff(sumA,sumB,n-1);
-    return mem[n][sumB];
-}
+bool visited[52][10002];
 
 
+void subset_sum_iter(int sum, int n){
+
+    for(int i=0;i<=n;i++){
+        for(int j=0;j<=sum;j++){
+            if(j==0){
+                mem[i][j]=true;
+            }
+            else if(i==0){
+                mem[i][j]=false;
+            }
+            else{
+                if(v[i-1]<=j){
+                    mem[i][j]= mem[i-1][j-v[i-1]] || mem[i-1][j];
+                }
+                else{
+                    mem[i][j]=mem[i-1][j];
+                }
+            }
+        }
+    }
 }
+
+
 int main(){
 //freopen("input.txt","r",stdin);
 //freopen("output.txt","w",stdout);
@@ -28,7 +38,8 @@ cin.tie(0);
 int tc;
 cin>>tc;
 while(tc--){
-    memset(mem,-1,sizeof(mem[0][0])*52*1002);
+    memset(mem,false,sizeof(mem[0][0])*52*10002);
+    memset(visited,false,sizeof(visited[0][0])*52*10002);
     int n;
     int sum=0;
     cin>>n;
@@ -39,7 +50,16 @@ while(tc--){
         sum+=t;
     }
 
-    cout<<min_subset_diff(0,sum,n)<<endl;
+    subset_sum_iter(sum,n);
+
+    int s1=0;
+
+    for(int i=0;i<=sum/2;i++){
+        if(mem[n][i]==true){
+            s1=i;
+        }
+    }
+    cout<<sum-2*s1<<endl;
 
 
 }

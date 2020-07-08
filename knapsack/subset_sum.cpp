@@ -68,8 +68,10 @@ while(tc--){
 
 
     }
-    cout<<subset_sum_iter(s,n)<<endl;
+    cout<<subset_sum(s,n)<<endl;
+
 }
+
 
 
 return 0;
