@@ -27,20 +27,38 @@ int equal_partition_sum(int sumA, int sumB,int n)
 
 }
 int equal_sum_partition_iter(int sum,int n){
+    if(sum%2!=0)return 0;
+    sum=sum/2;
     for(int i=0;i<=n;i++){
         for(int j=0;j<=sum;j++){
-            if(i==0 && j==0){
-                mem[i][j]=1;
-            }
-            else if(i==0 || j==0){
+            if(i==0){
                 mem[i][j]=0;
             }
+            else if(j==0){
+                mem[i][j]=1;
+            }
             else{
+                if(v[i-1]<=j){
+                    mem[i][j]=max(mem[i-1][j], mem[i-1][j-v[i-1]]);
+                }
+                else{
+                    mem[i][j]=mem[i-1][j];
+                }
 
             }
         }
     }
+    /*for(int i=0;i<=n;i++){
+        for(int j=0;j<=sum;j++){
+            cout<<mem[i][j]<<" ";
+
+        }
+        cout<<endl;
+    }*/
+    return mem[n][sum];
 }
+
+
 int main()
 {
 //freopen("input.txt","r",stdin);
@@ -62,7 +80,7 @@ int main()
             sum+=v[i];
 
         }
-        if(equal_partition_sum(0,sum,n))
+        if(equal_sum_partition_iter(sum,n))
         {
             cout<<"YES"<<endl;
         }
