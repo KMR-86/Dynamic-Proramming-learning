@@ -1,7 +1,8 @@
 <h1 style="color:blue">Step by Step Learning Dynamic Programming:</h1>
 
 Problems solved:
-(0/1 Knapsack problem)
+
+<h2>(0/1 Knapsack problem)</h2>
 1. https://www.hackerrank.com/contests/srin-aadc03/challenges/classic-01-knapsack
 
 (subset sum problem)
@@ -11,13 +12,28 @@ Problems solved:
 2.https://www.spoj.com/problems/MAIN72/
 
 
-(equal partition problem)
+<h2>(equal partition problem)</h2>
 
 1.https://practice.geeksforgeeks.org/problems/subset-sum-problem/0
 
 2.https://leetcode.com/problems/partition-equal-subset-sum/
 
-(Sumset Sum count)
+<h2>(Sumset Sum count)</h2>
 
 No submittable problem found so far!
+
+<h2>(minimum subset difference problem)</h2>
+
+1. https://practice.geeksforgeeks.org/problems/minimum-sum-partition/0
+
+
+<h2>(count the number of subset with given difference)</h2>
+
+No submittable problem found so far!
+
+<h2>(target sum)</h2>
+
+https://leetcode.com/problems/target-sum/
+
+
 
