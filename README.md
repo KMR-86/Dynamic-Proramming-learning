@@ -35,5 +35,6 @@ No submittable problem found so far!
 
 https://leetcode.com/problems/target-sum/
 
+<h2>Unbounded Knapsack problems</h2>
 
-
+1.https://practice.geeksforgeeks.org/problems/knapsack-with-duplicate-items/0

@@ -92,9 +92,4 @@ int main()
 }
 
 
-/*
-tricky case:
-1
-5 1
-0 0 0 0 1
-*/
+
