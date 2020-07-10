@@ -2,14 +2,14 @@
 #define S 1000000
 using namespace std;
 int v[22];
-bool visited[22][1002];
+
 int mem[22][1002];
 
 
 int subset_sum_iter(int s,int n){
     for(int i=0;i<=n;i++){
         for(int j=0;j<=s;j++){
-            if(j==0){
+            if(j==0 && i==0){
                 mem[i][j]=1;
             }
             else if(i==0){
@@ -27,6 +27,7 @@ int subset_sum_iter(int s,int n){
 
         }
     }
+    return mem[n][s];
 
 }
 int main(){
@@ -43,7 +44,7 @@ while(tc--){
     s=0;
     cin>>n>>target;
     memset(mem, 0, sizeof(mem[0][0]) * 22 * 1002);
-    memset(visited, false, sizeof(mem[0][0]) * 22 * 1002);
+
     for(int i=0;i<n;i++){
         int t;
         cin>>t;
@@ -53,19 +54,10 @@ while(tc--){
 
     }
     int ans=0;
-    subset_sum_iter(s,n);
-    for(int i=0;i<=s;i++){
-        if(mem[n][i]>0 && s-2*i==target){
-            ans+=mem[n][i];
-        }
-    }
+    ans=subset_sum_iter((s+target)/2,n);
+
     cout<<ans<<endl;
-    for(int i=0;i<=n;i++){
-        for(int j=0;j<=s;j++){
-            cout<<mem[i][j]<<" ";
-        }
-        cout<<endl;
-    }
+
 
 
 }
