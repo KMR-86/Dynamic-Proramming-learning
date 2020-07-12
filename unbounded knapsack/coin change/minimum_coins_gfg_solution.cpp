@@ -20,7 +20,7 @@ long long int coin_change(int n, int sum)
             {
                 mem[i][j]=0;
             }
-            else if(i==1)
+            /*else if(i==1)
             {
                 if(j%v[i-1]==0 && v[i-1]!=0)
                     mem[i][j]=j/v[i-1];
@@ -28,7 +28,7 @@ long long int coin_change(int n, int sum)
                 {
                     mem[i][j]=INT_MAX-1;
                 }
-            }
+            }*/
 
             else
             {
