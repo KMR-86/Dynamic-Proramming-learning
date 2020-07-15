@@ -59,12 +59,12 @@ while(tc--){
 
 }
 
-for(int i=0;i<=s1.size();i++){
+/*for(int i=0;i<=s1.size();i++){
     for(int j=0;j<=s2.size();j++){
         cout<<mem[i][j]<<" ";
     }
     cout<<endl;
-}
+}*/
 return 0;
 }
 

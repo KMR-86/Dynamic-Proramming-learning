@@ -51,3 +51,7 @@ https://leetcode.com/problems/target-sum/
 
 <h2>Longest Common Substring</h2>
 1.https://practice.geeksforgeeks.org/problems/longest-common-substring/0
+
+<h2>shortest common supersequence</h2>
+1.https://practice.geeksforgeeks.org/problems/shortest-common-supersequence/0
+2.https://leetcode.com/problems/shortest-common-supersequence/submissions/
