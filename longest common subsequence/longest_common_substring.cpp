@@ -4,14 +4,20 @@ using namespace std;
 string s1,s2;
 int mem[1002][1002];
 int lcs_recur(int i,int j){
+
     if(i==0 || j==0){
         mem[i][j]=0;
         ///cout<<i<<j<<endl;
         return mem[i][j];
     }
     if(mem[i][j]!=-1)return mem[i][j];
-    if(s1[i-1]==s2[j-1]){
+    if(s1[i-1]==s2[j-1] && (i==1 || j==1)){
         //cout<<s1[i-1]<<endl;
+        mem[i][j]=1;
+        return 1;
+
+    }
+    else if(s1[i-1]==s2[j-1] && s1[i-2]==s2[j-2]){
         mem[i][j]= max(max(1+lcs_recur(i-1,j-1),lcs_recur(i,j-1)),lcs_recur(i-1,j));
         return mem[i][j];
     }
@@ -22,23 +28,26 @@ int lcs_recur(int i,int j){
 
 }
 
-int lcs_iter(int n,int m){
-    for(int i=0;i<=n;i++){
-        for(int j=0;j<=m;j++){
-            if(i==0 || j==0){
-                mem[i][j]=0;
-            }
-            else if(s1[i-1]==s2[j-1]){
-                mem[i][j]=mem[i-1][j-1]+1;
-            }
-            else{
-                mem[i][j]=max(mem[i-1][j],mem[i][j-1]);
-            }
+string backtrack(int i,int j){
+
+    string lcs="";
+    while(i!=0 && j!=0){
+
+        if(mem[i][j]==1+mem[i-1][j-1] && s1[i-1]==s2[j-1]){
+            lcs=lcs+s1[i-1];
+            i--;
+            j--;
+        }
+        else if(mem[i][j]==mem[i-1][j]){
+            i=i-1;
+        }
+        else if(mem[i][j]==mem[i][j-1]){
+            j=j-1;
         }
 
     }
-    return mem[n][m];
-
+    reverse(lcs.begin(),lcs.end());
+    return lcs;
 }
 
 int main(){
@@ -48,16 +57,11 @@ ios_base::sync_with_stdio(0);
 cin.tie(0);
 
 int tc;
-cin>>tc;
-while(tc--){
-    memset(mem,0,sizeof(mem[0][0])*1002*1002);
-    int n,m;
-    cin>>n>>m;
-    cin>>s1>>s2;
-    cout<<lcs_iter(n,m)<<endl;
-
-
-}
+memset(mem,-1,sizeof(mem[0][0])*1002*1002);
+cin>>s1>>s2;
+//cout<<s1.size()<<s2.size()<<endl;
+mem[0][0]=0;
+cout<<lcs_recur(s1.size(),s2.size())<<endl;
 
 for(int i=0;i<=s1.size();i++){
     for(int j=0;j<=s2.size();j++){
@@ -65,13 +69,12 @@ for(int i=0;i<=s1.size();i++){
     }
     cout<<endl;
 }
+
+//cout<<backtrack(s1.size(),s2.size())<<endl;
+
 return 0;
 }
-
 /*
-1
-6
-7
 sabsca
 asabcsa
 */

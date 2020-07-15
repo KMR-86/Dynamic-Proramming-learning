@@ -45,3 +45,7 @@ https://leetcode.com/problems/target-sum/
 2.https://practice.geeksforgeeks.org/problems/coin-change/0
 
 <h2>coin change (minimum coin)</h2>
+
+<h2>LCS (Longest Common Subsequence)</h2>
+1.https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0
+
