@@ -55,3 +55,7 @@ https://leetcode.com/problems/target-sum/
 <h2>shortest common supersequence</h2>
 1.https://practice.geeksforgeeks.org/problems/shortest-common-supersequence/0
 2.https://leetcode.com/problems/shortest-common-supersequence/submissions/
+
+
+<h2>Kadane's algorithm</h2>
+1. https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=448
