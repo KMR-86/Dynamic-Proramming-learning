@@ -61,3 +61,7 @@ https://leetcode.com/problems/target-sum/
 1. https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=448
 (2d problem)
 1.https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&category=0&problem=44
+
+<h2>LIS(Longest increasing subsequence)</h3
+
+1.https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=0&problem=167
