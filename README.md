@@ -59,3 +59,5 @@ https://leetcode.com/problems/target-sum/
 
 <h2>Kadane's algorithm</h2>
 1. https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=448
+(2d problem)
+1.https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&category=0&problem=44
