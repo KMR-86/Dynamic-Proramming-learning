@@ -25,7 +25,7 @@ No submittable problem found so far!
 <h2>minimum subset difference problem </h2>
 
 1. https://practice.geeksforgeeks.org/problems/minimum-sum-partition/0
-
+2. https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=503
 
 <h2>count the number of subset with given difference </h2>
 
