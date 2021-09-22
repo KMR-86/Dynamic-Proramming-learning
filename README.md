@@ -42,9 +42,11 @@ https://leetcode.com/problems/target-sum/
 
 <h2>coin change (maximum ways)</h2>
 1.https://www.hackerrank.com/challenges/coin-change/problem
+
 2.https://practice.geeksforgeeks.org/problems/coin-change/0
 
 <h2>coin change (minimum coin)</h2>
+https://practice.geeksforgeeks.org/problems/number-of-coins1824/1
 
 <h2>LCS (Longest Common Subsequence)</h2>
 1.https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0
